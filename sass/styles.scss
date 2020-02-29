@@ -1,0 +1,220 @@
+$textcolor: #999999;
+$buttoncolor: #ea625c;
+$footertextcolor: white;
+
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+body{
+    font-family: "Roboto", "Arial", sans-serif;
+    background-image: url("../img/watches.jpg");
+    background-repeat: no-repeat;
+    background-position: 120% 5%;
+    background-size: 500px 600px;
+}
+.container{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sitenav{
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.sitenav__logo {
+    margin-right: auto;
+    img {
+      display: block;
+    }
+  }
+.sitenav__list {
+    display: flex;
+    margin: 0;
+    margin-right: 40px;
+    padding: 0;
+    list-style-type: none;
+  }
+.sitenav__item {
+    margin-left: 40px;
+  
+    a {
+      position: relative;
+      display: block;
+      border-bottom: 2px solid transparent;
+      color:$textcolor;
+      text-decoration: none;
+  
+      &::after {
+        position: absolute;
+        bottom: -7px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: transparent;
+        content: "";
+      }
+  
+      &:hover::after {
+        background-color: #222;
+      }
+    }
+  }
+.search-form__input {
+    padding: 5px 0;
+    border: none;
+    border-bottom: 1px solid #222;
+    outline: none;
+  
+    &:focus {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+  }
+.section{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $textcolor;
+    padding-bottom: 5px;
+    height: 610px;
+}
+.feature__name{
+    padding-top: 80px;
+    color:#333;
+    padding-bottom: 40px;
+    margin: 0;
+    width: 250px;
+}
+.feature__text{
+    width: 360px;
+    font-size: 14px;
+    color: $textcolor;
+    border-left-color: $textcolor;
+    border-left-style: inset;
+    border-left-width: 2px;
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+.features{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+.features__list{
+    width: 280px;
+    color: #333333;
+}
+
+.dots {
+    display: flex;
+    width: 5px;
+    height: 5px;
+    background-color: $textcolor;
+    box-shadow:
+      20px 0 $textcolor,
+      40px 0 $textcolor;
+  }
+  
+  .link a {
+    display: flex;
+    align-items: center;
+    color: tomato;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+  
+    &::before {
+      width: 50px;
+      height: 2px;
+      margin-right: 10px;
+      background-color: tomato;
+      content: "";
+      transform-origin: left center;
+      transition: width 0.4s ease;
+    }
+  
+    &:hover::before {
+      width: 60px;
+    }
+  }
+
+.container3{
+    padding-bottom: 40px;
+    .section2{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.button a{
+    width: 170px;
+    background-color: $buttoncolor;
+    padding: 13px 20px;
+    color: white;
+    text-decoration: none;
+}
+.container4{
+    background-image: url("../img/runners.jpg") ;
+    background-size: cover;
+    height: 800px;
+    
+    .feature__info__white{
+        float: right;
+        padding-right: 200px;
+        padding-top: 100px;
+        .feature__name{
+            width: 350px;
+            color: $footertextcolor;
+        }
+        .feature__text{
+            margin: 0;
+            width: 360px;
+            font-size: 14px;
+            color: $footertextcolor;
+            border-left-color: $footertextcolor;
+            border-left-style: inset;
+            border-left-width: 2px;
+            padding-left: 20px;
+            margin-bottom: 40px;
+        }
+    }
+}
+@media (max-width: 700px) {
+    .sitenav__list {
+      order: 1;
+      width: 100%;
+      justify-content: center;
+      margin-top: 20px;
+      margin-right: 0;
+    }
+  
+    .sitenav__item {
+      margin: 0 20px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .sitenav {
+      padding-top: 10px;
+    }
+  
+    .sitenav__container {
+      justify-content: center;
+    }
+  
+    .sitenav__logo {
+      margin: 0;
+    }
+  }
+  @media (max-width: 400px) {
+    .search-form,
+    .search-form__input {
+      width: 100%;
+    }
+  }
